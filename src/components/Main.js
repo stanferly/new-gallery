@@ -44,7 +44,6 @@ var ImgFigure = React.createClass({
     },
 
     render:function(){
-      var imageURL = ('../images/'+this.props.data.fileName);
 
       var styleObj = {};
 
@@ -71,7 +70,7 @@ var ImgFigure = React.createClass({
           imgFigureClassName += this.props.arrange.isInverse ? ' is-inverse' : '';
         return(
           <figure className={imgFigureClassName} style={styleObj} onClick={this.handleClick}>
-            <img src={imageURL}
+            <img src={this.props.data.imageUrl}
                  alt={this.props.data.title}/>
             <figcaption>
               <h2 className="img-title">{this.props.data.title}</h2>
